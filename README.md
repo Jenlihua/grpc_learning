@@ -11,7 +11,7 @@ cmd module
 1.  打开dos命令行，进入到D:/src目录下，先执行命令：protoc  --java_out=d:/src rpc_demo.proto，生产对应的序列化文件；
 2.  然后再执行命令：protoc --plugin=protoc-gen-grpc-java=d:/src/protoc-gen-grpc-java-1.8.0-windows-x86_64.exe --grpc-java_out=d:/src/ rpc_demo.proto
 
-####maven 方式：
+#### maven 方式：
 grpc_maven module
 1.  pom配置 https://github.com/Jenlihua/grpc-java
 2.  在src/main/protos(pom.xml中配置)目录下编辑 .proto文件
