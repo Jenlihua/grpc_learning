@@ -16,3 +16,9 @@ grpc_maven module
 1.  pom配置 https://github.com/Jenlihua/grpc-java
 2.  在src/main/protos(pom.xml中配置)目录下编辑 .proto文件
 3.  mvn build
+
+
+#### 调用示例
+1. gumei.grpcservice.grpc.hello 下生成了hello.proto的rpc java代码
+2. 编写client server调用代码
+3. 启动 HelloServer.java  和 HelloClient.java 可以看到HelloClient 调用了HelloServer的代码

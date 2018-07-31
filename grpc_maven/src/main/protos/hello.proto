@@ -1,0 +1,32 @@
+syntax = "proto3";  //指定该proto文件所采用的语法
+
+package com.test.netty.proto;  //定义proto文件的包,可以不用指定
+
+//指定proto文件生成的java类的包，可以不用指定，如果没有指定，将采用package的值
+option java_package = "com.gumei.grpcservice.grpc.hello";
+
+/**
+ * 指定生产的java类的名字,如果没有指定，将使用proto文件的文件名作为类名.
+ * 如果文件名为 contact_address.proto, 生成的类名为ContactAddress.java
+ */
+option java_outer_classname = "HelloProto";
+
+/**
+ * 当为true的时候，表示将所有的message各自生成在一个java文件中;
+ * 当为false的时候，将所有的内容生成在同一个文件中
+ */
+option java_multiple_files = true;
+
+
+
+service Greeter {
+    rpc SayHello (HelloRequest) returns (HelloReply){}
+}
+
+message HelloRequest{
+    string name =1;
+}
+
+message HelloReply{
+    string message =1;
+}
